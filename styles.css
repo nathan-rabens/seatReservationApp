@@ -1,0 +1,25 @@
+body {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#seating-area {
+	width: 98%;
+	margin: 0 auto;
+/*	display: inline-block;*/
+}
+
+.row {
+/*	display: inline-block;*/
+	width: 100%;
+}
+
+
+.seat {
+	width: 10%;
+	display: inline-block;
+	background-color: blue;
+	border: solid 1px black;
+	margin: 1%;
+	
+}
