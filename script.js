@@ -1,13 +1,14 @@
 $(document).ready(function(){
 	
-	
-	
 	$("#submit-btn").click(function(){
-		var firstName = $("#first-name").val();
-		console.log(firstName);
-		var lastName = $('#last-name').val();
-		var phone = $('')
-	})
-	
+		firstName = $("#first-name").val();
+		lastName = $("#last-name").val();
+		phoneNumber = $("#phone").val();
+		email = $("#email").val();
+		request = $("#request").val();
+	});
+
+	console.log(firstName);
 	
 });
+
