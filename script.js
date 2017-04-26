@@ -54,12 +54,18 @@ $(document).ready(function(){
 				seat.lastName = document.getElementById('last-name').value;
 //				seat.lastName = $('#last-name');
 			}
-		console.log(seat);
 		})
+<<<<<<< HEAD
 	})
 
 	$('#submit-btn').click(addInfo());
 
+=======
+	}
+	
+	$('#submit-btn').click(addInfo(this));
+	
+>>>>>>> f339fa357cb202d5ea61076da7b68013474ee296
 	console.log(seats);
 //	console.log(seats);
 //	$("#submit-btn").click(addInfo(event.target));
