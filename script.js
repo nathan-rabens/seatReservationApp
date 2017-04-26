@@ -7,42 +7,42 @@ $(document).ready(function(){
 	//drop down reservation form
 	$('#seating-area').click(function(){
 		$('#reservation-form').toggle('slow');
-	
+
 	})
-	
+
 	var seats = [];
-	
+
 	var seat;
-	
+
 	var selectedSeat;
-		
+
 	//create function to push 24 seats, with props, into seats array
 	function addSeats() {
-		for (i=1; i<25; i++) {	
+		for (i=1; i<25; i++) {
 			seat = {
 				number: i,
 				firstName: '',
 				lastName: '',
 				phoneNumber: '',
 				email: '',
-				request: '',	
+				request: '',
 			}
 			seats.push(seat);
-		} 
+		}
 	}
-	
+
 	addSeats();
-	
+
 	//change color of selected seat, assign selectedSeat value
 	$('.seat').click(function(e) {
-		
+
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
 			$(this).css('background-color', '#0ebaa1');
 		} else {
 			$(this).addClass('selected').css('background-color', '#c6ff6b');
 		}
-		
+
 		selectedSeat = e.target.innerText;
 		console.log(e.target.innerText);
 
@@ -67,10 +67,9 @@ $(document).ready(function(){
 		}
 		console.log(seats);
 	});
-//	
+//
 //	if ($('.reserved')) {
 //		$('.reserved p').text('"Reserved for" + seat.lastName');
 //	}
 
 });
-
