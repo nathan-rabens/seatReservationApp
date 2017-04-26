@@ -21,11 +21,11 @@ $(document).ready(function(){
 		for (i=1; i<25; i++) {	
 			seat = {
 				number: i,
-				firstName: "",
-				lastName: "",
-				phoneNumber: "",
-				email: "",
-				request: "",	
+				firstName: '',
+				lastName: '',
+				phoneNumber: '',
+				email: '',
+				request: '',	
 			}
 			seats.push(seat);
 		} 
@@ -34,8 +34,8 @@ $(document).ready(function(){
 	addSeats();
 	
 	//change color of selected seat, assign selectedSeat value
-	$(".seat").click(function(e){
-		$(this).text("Reserve a Seat!").css("background-color", "#c6ff6b");
+	$('.seat').click(function(e){
+		$(this).text('Reserve a Seat!').css('background-color', '#c6ff6b');
 		selectedSeat = e.target.innerText;
 		console.log(e.target.innerText);
 
@@ -48,7 +48,11 @@ $(document).ready(function(){
 	//		console.log(selectedSeat);
 		seats.forEach(function(seat){
 			if (selectedSeat == seat.number) {
-				seat.firstName = "Chelsea";
+				seat.firstName = $('#first-name').val();
+				seat.lastName = $('#last-name').val();
+				seat.phoneNumber = $('#phone').val();
+				seat.email = $('#email').val();
+				seat.request = $('#request').val();
 			}
 		})
 		console.log(seats);
