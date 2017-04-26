@@ -41,3 +41,6 @@ body {
 input {
   padding-bottom: 15px;
 }
+#checkmark {
+  width: 20px;
+}
