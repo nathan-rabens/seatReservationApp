@@ -16,9 +16,8 @@ body {
 .seat {
 	width: 10%;
 	display: inline-block;
-	background-color: blue;
-	border: solid 1px black;
+  border-radius: 8px;
+	background-color: #0ebaa1;
+	border-style: ridge;
 	margin: 1%;
 }
-
-
