@@ -61,16 +61,12 @@ $(document).ready(function(){
 			}
 		})
 		if ($('div').hasClass('selected')) {
-			$('div').removeClass('selected').addClass('reserved');
-		} else if ($('div').hasClass('reserved')) {
-			$('.reserved').attr('.innerText', '');
-		}
+			$('.selected').removeClass('selected').addClass('reserved');
+		} 
 		console.log(seats);
 	});
-//	
-//	if ($('.reserved')) {
-//		$('.reserved p').text('"Reserved for" + seat.lastName');
-//	}
+	
+	$('.reserved p').text('reserved');
 
 });
 
