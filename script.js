@@ -40,11 +40,10 @@ $(document).ready(function(){
 				seat.lastName = document.getElementById('last-name').value;
 //				seat.lastName = $('#last-name');
 			}
-		console.log(seat);
 		})
 	}
 	
-	$('#submit-btn').click(addInfo());
+	$('#submit-btn').click(addInfo(this));
 	
 	console.log(seats);
 //	console.log(seats);
