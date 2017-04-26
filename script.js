@@ -9,6 +9,21 @@ $(document).ready(function(){
 	});
 
 	console.log(firstName);
+	
+	//create empty array for seats with loop (1 to 24)
+	
+	//push seats with empty object properties into the array ((name.val, seat number.text, phone.val, email.val, request.val))
+	
+	//if clicked add class selected to seat
+	
+	//if seat is clicked form drops down
+	
+	//if form submited, seats with class selected toggleClass to researved, add innerText = seat.name
+	
+	//add button that drops down seating-area div if clicked
+	
+	
+	
 
 });
 //pick best look
