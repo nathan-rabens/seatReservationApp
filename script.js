@@ -1,10 +1,11 @@
 $(document).ready(function(){
+	//////////create empty array for seats with loop (1 to 24) CHELSEA
 
-	//create empty array for seats with loop (1 to 24) CHELSEA
-
+	//delcare empty seats array
 	var seats = [];
+	//declare empty seat var
 	var seat
-
+	//create function to push 24 seats, with props, into seats array
 	function addSeats() {
 		for (i=1; i<25; i++) {
 			seat = {
@@ -26,10 +27,12 @@ $(document).ready(function(){
 	//push seats with empty object properties into the array ((name.val, seat number.text, phone.val, email.val, request.val)) CHELSEA
 
 	function addInfo() {
+		//var for selectedSeat =
 		var selectedSeat = $('.selected p').text();
 		console.log(selectedSeat);
 		selectedSeat = parseInt(selectedSeat);
 		console.log(selectedSeat);
+
 		if (selectedSeat === seat.number ) {
 //			seat.firstName = $("#first-name").val();
 			seat.firstName = 'Chelsea';
@@ -44,6 +47,21 @@ $(document).ready(function(){
 	}
 
 	addInfo();
+
+		seats.forEach(function(seat){
+			if (selectedSeat === seat.number) {
+				seat.firstName = "Chelsea";
+				seat.lastName = document.getElementById('last-name').value;
+//				seat.lastName = $('#last-name');
+			}
+		console.log(seat);
+		})
+	})
+
+	$('#submit-btn').click(addInfo());
+
+	console.log(seats);
+//	console.log(seats);
 //	$("#submit-btn").click(addInfo(event.target));
 //
 //	console.log(seats);
