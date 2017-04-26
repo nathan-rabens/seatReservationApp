@@ -1,6 +1,7 @@
 body {
 	margin: 0 auto;
 	text-align: center;
+	background-image: url('curtains.jpg');
 }
 
 #seating-area {
@@ -41,6 +42,24 @@ body {
 input {
   padding-bottom: 15px;
 }
+
 #checkmark {
   width: 20px;
+
+.theaterName {
+	margin-top: 15%;
+}
+
+.seatDisplayButton {
+	width: 150px;
+	height: 75px;
+	font-family: 'Russo One', sans-serif;
+	font-size: 20px;
+}
+
+h1 {
+	font-family: 'Russo One', sans-serif;
+	font-size: 40px;
+	color: white;
+
 }
