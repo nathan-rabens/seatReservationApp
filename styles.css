@@ -24,3 +24,20 @@ body {
 .seat:hover {
     background-color:  #c6ff6b;;
 }
+/*styling form and buttons*/
+#submit-btn {
+  border: 1px solid #777777;
+  background: #c6ff6b;
+  font: bold 14px 'Trebuchet MS';
+  margin-top: 10px;
+  padding: 8px;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+#book {
+  margin-top: 10px;
+}
+input {
+  padding-bottom: 15px;
+}

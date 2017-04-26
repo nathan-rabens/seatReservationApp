@@ -19,5 +19,5 @@ $(document).ready(function(){
   //       $(this).css("background-color", "#0ebaa1");
   //  });
   $(".seat").click(function(){
-        $(this).text("Reserve a Seat!");
+        $(this).text("Reserve a Seat!").css("background-color #0ebaa1");
     });
