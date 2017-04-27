@@ -1,11 +1,4 @@
 $(document).ready(function(){
-	function test(){
-$( "div" ).data( "test", { first: 16, last: "pizza!" } );
-$( "span:first" ).text( $( "div" ).data( "test" ).first );
-$( "span:last" ).text( $( "div" ).data( "test" ).last );
-	}
-
-	test();
 	
 	//drop-down seating area
 	$('.seatPicker').click(function(){
@@ -24,6 +17,8 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 	var selectedSeat;
 
 	var guestName;
+	
+	var name;
 
 	//create function to push 24 seats, with props, into seats array
 	function addSeats() {
@@ -90,7 +85,8 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			}
 		})
 		if ( $(this).hasClass('reserved') ) {
-			$(this).children('p').text(guestName.attr('data-lastname', seat.lastName));
+			name = $(this).attr('data-lastname');
+			$(this).children('p').text(name);
 		}
 	})
 
