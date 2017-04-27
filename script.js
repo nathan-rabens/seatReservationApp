@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	//drop down reservation form
 	$('#seating-area').click(function(){
-		$('#reservation-form').toggle('slow');
+		$('#reservation-form').slideDown('slow');
 
 	})
 
@@ -15,6 +15,8 @@ $(document).ready(function(){
 	var seat;
 
 	var selectedSeat;
+	
+	var guestName;
 
 	//create function to push 24 seats, with props, into seats array
 	function addSeats() {
@@ -44,14 +46,13 @@ $(document).ready(function(){
 		}
 
 		selectedSeat = e.target.innerText;
-		console.log(e.target.innerText);
 
 	});
 
 	//function to add user info to selected seat
 	$('#submit-btn').click(function() {
 		console.log(selectedSeat);
-		seats.forEach(function(seat){
+		seats.forEach(function(seat) {
 			if (selectedSeat == seat.number) {
 				seat.firstName = $('#first-name').val();
 				seat.lastName = $('#last-name').val();
@@ -61,15 +62,35 @@ $(document).ready(function(){
 			}
 		})
 		if ($('div').hasClass('selected')) {
-			$('div').removeClass('selected').addClass('reserved');
-		} else if ($('div').hasClass('reserved')) {
-			$('.reserved').attr('.innerText', '');
+			$('.selected').removeClass('selected').addClass('reserved');
+			$('.reserved p').text('Reserved');
 		}
-		console.log(seats);
-	});
-//
-//	if ($('.reserved')) {
-//		$('.reserved p').text('"Reserved for" + seat.lastName');
-//	}
+	})
+
+
+	//add last name when reserved seat is hovered
+	$('.seat').mouseover(function() {
+//		seats.forEach(function() {
+//			if (selectedSeat == seat.number) {
+//				guestName = this.lastName;
+//			}
+//		})
+//		guestName = seat.lastName;
+//		console.log(guestName);
+		if ( $(this).hasClass('reserved') ) {
+			$(this).children('p').text('Last Name');
+		}
+	})
+	
+	//return to reserved when mouse out
+	$('.seat').mouseout(function() {
+		if ( $(this).hasClass('reserved') ) {
+			$(this).children('p').text('Reserved');
+		}
+	})
 
 });
+
+
+
+
