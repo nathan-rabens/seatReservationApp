@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	
 	//drop-down seating area
 	$('.seatPicker').click(function(){
 		$('#seating-area').toggle('slow');
@@ -19,7 +18,7 @@ $(document).ready(function(){
 	var selectedSeat;
 
 	var guestName;
-	
+
 	var name;
 
 	//create function to push 24 seats, with props, into seats array
@@ -57,81 +56,27 @@ $(document).ready(function(){
 
 	//function to add user info to selected seat
 	$('#submit-btn').click(function() {
-		$('div').each(function(i) {
-			if $(i).hasClass('selected') {
-					i = {
-						firstName: $('#first-name').val(),
-						lastName: $('#last-name').val(),
-						phoneNumber: $('#phone').val(),
-						email: $('#email').val(),
-						request: $('#request').val(),
-//						attr('data-lastname', seat.lastName)
-					}
-				seats2.push(i);
-					})
-				});
+		seats.forEach(function(seat) {
+			if (selectedSeat == seat.number) {
+				seat.firstName = $('#first-name').val();
+				seat.lastName = $('#last-name').val();
+				seat.phoneNumber = $('#phone').val();
+				seat.email = $('#email').val();
+				seat.request = $('#request').val();
+				guestName.attr('data-lastname', seat.lastName)
+			}
+		})
 		if ($('div').hasClass('selected')) {
 			$('.selected').removeClass('selected').addClass('reserved');
-			$('.reserved p').text('Reserved');	
-			}
-		
-		
-		
-	})
-////		seats.forEach(function(seat) {
-//			if ( $('div').each(function(i) {
-//				if ($(this).hasClas('selected') {
-//					seat = {
-//						firstName: $('#first-name').val(),
-//						lastName: $('#last-name').val(),
-//						phoneNumber: $('#phone').val(),
-//						email: $('#email').val(),
-//						request: $('#request').val(),
-////						attr('data-lastname', seat.lastName)
-//					}
-//				seats2.push(seat);
-//					})
-//				});
-////				
-////			}).hasClass('selected') ) {
-////					seat = {
-////						firstName: $('#first-name').val(),
-////						lastName: $('#last-name').val(),
-////						phoneNumber: $('#phone').val(),
-////						email: $('#email').val(),
-////						request: $('#request').val(),
-//////						attr('data-lastname', seat.lastName)
-////				}
-////				seats2.push(seat);
-////			}
-//				console.log(seats2);
-//				
-////				{
-////				seat.firstName = $('#first-name').val();
-////				seat.lastName = $('#last-name').val();
-////				seat.phoneNumber = $('#phone').val();
-////				seat.email = $('#email').val();
-////				seat.request = $('#request').val(); 
-////				seat.attr('data-lastname', seat.lastName)
-////			}
-//			if ($('div').hasClass('selected')) {
-//			$('.selected').removeClass('selected').addClass('reserved');
-//			$('.reserved p').text('Reserved');	
-//			}
-//
-//	
-////		if ($('div').hasClass('selected')) {
-////			$('.selected').removeClass('selected').addClass('reserved');
-//////			$('.reserved p').text('Reserved');
-//////		})
-////		
-//////		$('.reserved').attr('data-lastname', 'test');
-//////		console.log(data-lastname);
-////		console.log(selectedSeat);
-////
-////	});
+			$('.reserved p').text('Reserved');
+		}
 
-	
+//		$('.reserved').attr('data-lastname', 'test');
+//		console.log(data-lastname);
+		console.log(guestName);
+
+	});
+
 	//add last name when reserved seat is hovered
 	$('.seat').mouseover(function() {
 		if ( $(this).hasClass('reserved') ) {
