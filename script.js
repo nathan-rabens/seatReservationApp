@@ -6,7 +6,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 	}
 
 	test();
-	
+
 	//drop-down seating area
 	$('.seatPicker').click(function(){
 		$('#seating-area').toggle('slow');
@@ -79,7 +79,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 	});
 
 
-	
+
 	//add last name when reserved seat is hovered
 	$('.seat').mouseover(function() {
 		seats.forEach(function() {
@@ -100,10 +100,6 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$(this).children('p').text('Reserved');
 		}
 	})
-
-	(document).getElementById("submit-btn").addEventListener(click, function(event){
-		event.preventDefault()
-	});
 
 
 });
