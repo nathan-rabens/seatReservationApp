@@ -10,7 +10,7 @@ $(document).ready(function(){
 	})
 
 	var seats = [];
-	
+
 	var seats2 = [];
 
 	var seat;
@@ -44,9 +44,9 @@ $(document).ready(function(){
 
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
-			$(this).css('background-color', '#0ebaa1');
+			$(this).css('background-color', '#E5E7E6');
 		} else {
-			$(this).addClass('selected').css('background-color', '#c6ff6b');
+			$(this).addClass('selected').css('background-color', '#646362');
 		}
 
 		selectedSeat = e.target.innerText;
