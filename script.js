@@ -23,7 +23,6 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 
 	var selectedSeat;
 
-
 	var guestName;
 
 	//create function to push 24 seats, with props, into seats array
@@ -45,6 +44,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 
 	//change color of selected seat, assign selectedSeat value
 	$('.seat').click(function(e) {
+		guestName = $(this).attr("data-lastname", "test");
 
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
@@ -65,32 +65,32 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 				seat.lastName = $('#last-name').val();
 				seat.phoneNumber = $('#phone').val();
 				seat.email = $('#email').val();
-				seat.request = $('#request').val();
-				console.log(seat);
-				guestName = seat.lastName;
-				console.log(guestName);
+				seat.request = $('#request').val(); 
+				guestName.attr('data-lastname', seat.lastName)
 			}
 		})
 		if ($('div').hasClass('selected')) {
 			$('.selected').removeClass('selected').addClass('reserved');
 			$('.reserved p').text('Reserved');
 		}
+		
+//		$('.reserved').attr('data-lastname', 'test');
+//		console.log(data-lastname);
+		console.log(guestName);
 
 	});
-
 
 	
 	//add last name when reserved seat is hovered
 	$('.seat').mouseover(function() {
 		seats.forEach(function() {
 			if (selectedSeat == seat.number) {
-				guestName =  this.lastName;
-				console.log(guestName);
+//				guestName =  this.lastName;
+//				console.log(guestName);
 			}
 		})
-		guestName = seat.lastName;
 		if ( $(this).hasClass('reserved') ) {
-			$(this).children('p').text('Last Name');
+			$(this).children('p').text(guestName.attr('data-lastname', seat.lastName));
 		}
 	})
 
@@ -100,10 +100,5 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$(this).children('p').text('Reserved');
 		}
 	})
-
-	(document).getElementById("submit-btn").addEventListener(click, function(event){
-		event.preventDefault()
-	});
-
 
 });
