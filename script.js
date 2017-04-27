@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	//drop down reservation form
 	$('#seating-area').click(function(){
-		$('#reservation-form').toggle('slow');
+		$('#reservation-form').slideDown('slow');
 
 	})
 
