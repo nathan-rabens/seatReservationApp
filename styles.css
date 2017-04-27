@@ -2,6 +2,7 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	background-image: url('curtains.jpg');
+	font-family: 'Roboto', sans-serif;
 }
 
 #seating-area {
@@ -17,24 +18,28 @@ body {
 	width: 10%;
 	display: inline-block;
   	border-radius: 8px;
-	background-color: #0ebaa1;
+	background-color: #E5E7E6;
 	border-style: ridge;
 	margin: 1%;
 }
 /* hover hover seat */
 .seat:hover {
-    background-color:  #c6ff6b;;
+    background-color:  #646362;;
 }
 /*styling form and buttons*/
 #submit-btn {
   border: 1px solid #777777;
-  background: #c6ff6b;
-  font: bold 14px 'Trebuchet MS';
+  background: #646362;
+  font: bold;
+	font-size: 20px;
+color:		#E5E7E6;
   margin-top: 10px;
   padding: 8px;
   cursor: pointer;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+	font-family: 'Roboto Mono', monospace;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
 /*form styles*/
 #reservation-form{
@@ -43,7 +48,7 @@ body {
 	padding: 15px;
 	border-radius: 10px;
 	border-style: inset;
-	background-color: #0ebaa1;
+	background-color: rgba(200, 27, 20, 0.75);
 
 }
 #book {
@@ -61,7 +66,7 @@ input {
 }
 
 .theaterName {
-	margin-top: 5%;
+	margin-top: 2%;
 	border-radius: 10px;
 }
 
@@ -69,7 +74,7 @@ input {
 	width: 150px;
 	height: 100px;
 	margin-bottom: 20px;
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-size: 20px;
 	color: white;
 	border-radius: 10px;
@@ -77,7 +82,7 @@ input {
 }
 
 h1 {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-size: 40px;
 	color: white;
 }
