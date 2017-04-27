@@ -57,13 +57,18 @@ input {
 
 .theaterName {
 	margin-top: 10%;
+	border-radius: 10px;
 }
 
 .seatDisplayButton {
 	width: 150px;
-	height: 75px;
+	height: 100px;
+	margin-bottom: 20px;
 	font-family: 'Russo One', sans-serif;
 	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+	background: linear-gradient(-70deg, #1b1e1e, #404747, #96aaaa, #707c7c, #404747, #1b1e1e);
 }
 
 h1 {
