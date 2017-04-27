@@ -7,9 +7,10 @@
     <title>Seat Reservations</title>
   </head>
   <body>
+    
 	  <header>
     <div class="theaterName">
-		  <h1>Netflix & Chill</h1>
+		      <h1>Netflix & Chill</h1>
     </div>
     <div class="seatPicker">
       <form>
@@ -99,7 +100,6 @@
 			  <div class='seat'>
 				  <p>24</p>
 			  </div>
-        <!-- <img id="checkmark" src="checkmark.png" alt="check"> -->
 		  </div>
 
 	  </div>
@@ -107,12 +107,12 @@
 
 	  <div id="reservation-form" style="display: none;">
 		  <form id="book">
-			<input type="text" id="first-name" placeholder="First Name">
-		  	<input type="text" id="last-name" placeholder="Last Name"><br>
-			<input type="text" id="phone" placeholder="Phone Number">
-			<input type="email" id="email" placeholder="Email"><br>
+			<input type="text" id="first-name" placeholder="First Name" required>
+		  <input type="text" id="last-name" placeholder="Last Name" required><br>
+			<input type="text" id="phone" placeholder="Phone Number" required>
+			<input type="email" id="email" placeholder="Email" required><br>
 			<input type="text" id="request" placeholder="Special Requests"><br>
-		  	<button type="button" id="submit-btn">Submit</button>
+		  <button type="submit" id="submit-btn">Submit</button>
 		  </form>
 	  </div>
 

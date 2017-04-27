@@ -12,7 +12,6 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 		$('#seating-area').toggle('slow');
 	});
 
-	//drop down reservation form
 	$('#seating-area').click(function(){
 		$('#reservation-form').slideDown('slow');
 
@@ -23,7 +22,8 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 	var seat;
 
 	var selectedSeat;
-	
+
+
 	var guestName;
 
 	//create function to push 24 seats, with props, into seats array
@@ -75,7 +75,9 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$('.selected').removeClass('selected').addClass('reserved');
 			$('.reserved p').text('Reserved');
 		}
-	})
+
+	});
+
 
 	
 	//add last name when reserved seat is hovered
@@ -91,7 +93,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$(this).children('p').text('Last Name');
 		}
 	})
-	
+
 	//return to reserved when mouse out
 	$('.seat').mouseout(function() {
 		if ( $(this).hasClass('reserved') ) {
@@ -99,8 +101,9 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 		}
 	})
 
+	(document).getElementById("submit-btn").addEventListener(click, function(event){
+		event.preventDefault()
+	});
+
+
 });
-
-
-
-
