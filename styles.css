@@ -36,19 +36,27 @@ body {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
+/*form styles*/
+#reservation-form{
+	width: 13%;
+	margin: 0 auto;
+	padding: 15px;
+	border-radius: 10px;
+	border-style: inset;
+	background-color: #0ebaa1;
+
+}
 #book {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+	line-height: 30px;
+
 }
 input {
   padding-bottom: 15px;
 }
 
-#checkmark {
-  width: 20px;
-}
-
 .theaterName {
-	margin-top: 15%;
+	margin-top: 10%;
 }
 
 .seatDisplayButton {
@@ -62,5 +70,4 @@ h1 {
 	font-family: 'Russo One', sans-serif;
 	font-size: 40px;
 	color: white;
-
 }
