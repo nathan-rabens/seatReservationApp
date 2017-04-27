@@ -1,12 +1,4 @@
 $(document).ready(function(){
-	function test(){
-$( "div" ).data( "test", { first: 16, last: "pizza!" } );
-$( "span:first" ).text( $( "div" ).data( "test" ).first );
-$( "span:last" ).text( $( "div" ).data( "test" ).last );
-	}
-
-	test();
-
 	//drop-down seating area
 	$('.seatPicker').click(function(){
 		$('#seating-area').toggle('slow');
@@ -23,8 +15,9 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 
 	var selectedSeat;
 
-
 	var guestName;
+
+	var name;
 
 	//create function to push 24 seats, with props, into seats array
 	function addSeats() {
@@ -45,6 +38,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 
 	//change color of selected seat, assign selectedSeat value
 	$('.seat').click(function(e) {
+		guestName = $(this).attr("data-lastname", "test");
 
 		if ($(this).hasClass('selected')) {
 			$(this).removeClass('selected');
@@ -66,9 +60,7 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 				seat.phoneNumber = $('#phone').val();
 				seat.email = $('#email').val();
 				seat.request = $('#request').val();
-				console.log(seat);
-				guestName = seat.lastName;
-				console.log(guestName);
+				guestName.attr('data-lastname', seat.lastName)
 			}
 		})
 		if ($('div').hasClass('selected')) {
@@ -76,21 +68,23 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$('.reserved p').text('Reserved');
 		}
 
+//		$('.reserved').attr('data-lastname', 'test');
+//		console.log(data-lastname);
+		console.log(guestName);
+
 	});
-
-
 
 	//add last name when reserved seat is hovered
 	$('.seat').mouseover(function() {
 		seats.forEach(function() {
 			if (selectedSeat == seat.number) {
-				guestName =  this.lastName;
-				console.log(guestName);
+//				guestName =  this.lastName;
+//				console.log(guestName);
 			}
 		})
-		guestName = seat.lastName;
 		if ( $(this).hasClass('reserved') ) {
-			$(this).children('p').text('Last Name');
+			name = $(this).attr('data-lastname');
+			$(this).children('p').text(name);
 		}
 	})
 
@@ -100,6 +94,5 @@ $( "span:last" ).text( $( "div" ).data( "test" ).last );
 			$(this).children('p').text('Reserved');
 		}
 	})
-
 
 });
