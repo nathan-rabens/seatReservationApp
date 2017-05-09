@@ -38,6 +38,7 @@ $(document).ready(function(){
 
 	addSeats();
 
+	console.log(seats);
 	//change color of selected seat, assign selectedSeat value
 	$('.seat').click(function(e) {
 		guestName = $(this).attr("data-lastname", "test");
@@ -51,8 +52,9 @@ $(document).ready(function(){
 
 		selectedSeat = e.target.innerText;
 
-
+		
 	});
+
 
 	//function to add user info to selected seat
 	$('#submit-btn').click(function() {
@@ -76,6 +78,8 @@ $(document).ready(function(){
 		console.log(guestName);
 
 	});
+	
+	console.log(seats);
 
 	//add last name when reserved seat is hovered
 	$('.seat').mouseover(function() {
