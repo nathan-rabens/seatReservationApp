@@ -17,7 +17,8 @@ body {
 .seat {
 	width: 10%;
 	display: inline-block;
-  	border-radius: 8px;
+		border-radius: 2px;
+		/*border-radius: 8px;*/
 	background-color: #E5E7E6;
 	border-style: ridge;
 	margin: 1%;
